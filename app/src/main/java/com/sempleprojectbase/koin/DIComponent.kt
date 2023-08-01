@@ -13,7 +13,6 @@ import org.koin.core.component.inject
  */
 class DIComponent : KoinComponent {
 
-
     // Managers
     val internetManager by inject<InternetManager>()
 

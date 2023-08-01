@@ -1,6 +1,5 @@
 package com.sempleprojectbase.koin
 
-import android.app.Application
 import android.content.Context
 import android.net.ConnectivityManager
 import com.sempleprojectbase.managers.InternetManager
@@ -16,9 +15,10 @@ import org.koin.dsl.module
  * @Accounts
  *      -> https://stackoverflow.com/users/17921670/kamran-khan
  */
+
 private val applicationScope = CoroutineScope(SupervisorJob())
 
-
+//
 private val managerModules = module {
     single { InternetManager(androidContext().getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager) }
 }
