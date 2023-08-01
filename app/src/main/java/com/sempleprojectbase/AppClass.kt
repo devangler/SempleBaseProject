@@ -11,17 +11,19 @@ import org.koin.core.context.startKoin
  * @Accounts
  *      -> https://stackoverflow.com/users/17921670/kamran-khan
  */
+
 class AppClass:Application() {
     override fun onCreate() {
         super.onCreate()
         initKoin()
 
-
     }
     private fun initKoin() {
         startKoin {
+
             androidContext(this@AppClass)
             modules(modulesList)
+
         }
     }
 }
